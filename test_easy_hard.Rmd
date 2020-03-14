@@ -44,4 +44,8 @@ fig
  fig
 ```
 
-
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  fig.path = "/Users/yuanyuan/Documents/GitHub/GeomScale"
+)
+```
