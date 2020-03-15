@@ -2,7 +2,11 @@
 title: "test_easy"
 author: "yy"
 date: "3/14/2020"
-output: html_document
+output:
+  github_document:
+    pandoc_args: [
+      "--filter", "/opt/local/filters/myfilter"
+    ]
 ---
 
 ```{r setup, include=FALSE}
@@ -42,10 +46,4 @@ fig
    dt=data.frame(dt)
    fig <- plot_ly(dt,type="scatter3d", x = ~x, y = ~y, z = ~z, mode="markers",colors = c('#BF382A'),sizes=c(0.05, 0.05))
  fig
-```
-
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  fig.path = "/Users/yuanyuan/Documents/GitHub/GeomScale"
-)
 ```
